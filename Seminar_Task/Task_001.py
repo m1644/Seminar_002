@@ -5,8 +5,7 @@
         - Для N = 5: [1, -3, 9, -27, 81]
 '''
 
-n = int(input("Введите N = "))
-some_list = []
-for i in range (0, n):
-   some_list.append((-3)**i)
-print(some_list)
+N = int(input("Введите число N = "))
+for i in range(N):
+    result = (3 ** i * (-1) ** i)
+    print(result, end = ', ')
