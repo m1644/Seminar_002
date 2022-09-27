@@ -5,14 +5,9 @@
     - 0,56 -> 11
 '''
 
-N = input('Введите вещественное число ')
-def summa(N):                            
-    if float(N) < 0:                            
-        x = float(N) * (-1)
-    number = 0
-
-    for i in str(N):
-        if i != '.':
-            number += int(i)
-    return number
-print(f'Сумма цифр равна {summa(N)}')
+num = input('Введите вещественное число: ')
+sum = 0
+for i in num:
+    if i != ".":
+        sum = sum + int(i)
+print(f'Сумма цифр числа {num} равна =', sum)
