@@ -8,12 +8,12 @@
 n = int(input('Введите количество чисел в списке: '))
 
 def numbers(n):
-    summ = 0
+    sum = 0
     for i in range(n):
         a = int(input(f'Введите число {i + 1}: '))
         a = (1 + 1/a) ** a
-        summ = a + summ
+        sum = a + sum
         i += 1
-    return summ
+    return sum
 
 print('Сумма чисел равна =', round((numbers(n)), 3))
