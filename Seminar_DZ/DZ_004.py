@@ -4,6 +4,7 @@
 Позиции хранятся в файле file.txt в одной строке одно число.
 '''
 
+'''
 from random import randint
 
 n = int(input('Введите число N: '))
@@ -12,6 +13,7 @@ with open('file.txt', 'w') as data:
     data.write('0\n')
     data.write('1\n')
     data.write('4\n')
+    data.write('8\n')
 
 def get_numbers(n):
     return [randint(-n/2, n) for i in range(-n, n + 1)]
@@ -35,3 +37,23 @@ numbers = get_numbers(n)
 print(numbers)
 print(datalist)
 print(get_mult(numbers, datalist))
+'''
+
+from random import randint
+
+def func(N):
+    lst = []
+    mult = 1
+    for i in range(N):
+        lst.append(randint(-N, N))
+
+    file = open('file.txt', 'r')
+    for line in file:
+        print(line)
+        mult *= lst[int(line)]
+    file.close()
+    print(mult)
+
+if __name__ == '__main__':
+    chislo = int(input('Введите число N: '))
+    func(chislo)
